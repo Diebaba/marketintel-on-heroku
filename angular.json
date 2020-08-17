@@ -27,7 +27,7 @@
               "src/styles.css",
               "node_modules/chart.js/dist/Chart.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-               "node_modules/semantic-ui-css/semantic.min.css",
+              "node_modules/semantic-ui-css/semantic.min.css",
               "node_modules/semantic-ui-css/components/button.min.css",
               "node_modules/semantic-ui-css/components/accordion.min.css",
               "node_modules/semantic-ui-css/components/ad.min.css",
@@ -104,7 +104,6 @@
               "node_modules/semantic-ui-css/components/visit.min.js",
               "node_modules/semantic-ui-css/components/visibility.min.js"
             ]
-
           },
           "configurations": {
             "production": {
@@ -197,6 +196,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "marketintel"
+    }
+  },
+  "defaultProject": "marketintel",
+  "cli": {
+    "analytics": "4fed2258-b34e-4b8a-8b8a-9362a632aa55"
+  }
 }

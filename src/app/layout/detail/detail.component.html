@@ -1,0 +1,70 @@
+<div style="margin-left: -10%;">
+    <h2>Tableau des admissions à l'examen du baccalauréat sénégalais</h2> 
+ </div>
+ <table class="ui celled table">
+     <thead class="full-width" >
+         <tr >
+             <th style="background-color: #0bcab1; text-align: center;" >Régions</th>
+             <th style="background-color: #0bcab1;text-align: center;">Année</th>
+             <th style="background-color: #0bcab1;text-align: center;">Garçons</th>
+             <th style="background-color: #0bcab1;text-align: center;">Filles</th>
+             <th style="background-color: #0bcab1;text-align: center;">Total</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let admission of admission; ">
+             <td style="text-align: center;">{{admission.region}}</td>
+             <td style="text-align: center;">{{admission.annee}}</td>
+             <td style="text-align: center;">{{admission.garcon}}</td>
+             <td style="text-align: center;">{{admission.fille}}</td>
+             <td style="text-align: center;">{{admission.total}}</td>
+         </tr>
+     </tbody>
+ </table>
+ <div style="margin-left: -62%;">
+     <h2>Scolarisation par région</h2> 
+  </div>
+  <table class="ui celled table">
+     <thead class="full-width">
+         <tr>
+             <th style="background-color: #0bcab1;text-align: center;">Régions</th>
+             <th style="background-color: #0bcab1;text-align: center;">Année</th>
+             <th style="background-color: #0bcab1;text-align: center;">Garçons</th>
+             <th style="background-color: #0bcab1;text-align: center;">Filles</th>
+             <th style="background-color: #0bcab1;text-align: center;">Total</th>
+             <th style="background-color: #0bcab1;text-align: center;">Indice de parité</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let scolarisation of scolarisation; ">
+             <td style="text-align: center;">{{scolarisation.region}}</td>
+             <td style="text-align: center;">{{scolarisation.annee}}</td>
+             <td style="text-align: center;">{{scolarisation.garcon}}</td>
+             <td style="text-align: center;">{{scolarisation.fille}}</td>
+             <td style="text-align: center;">{{scolarisation.total}}</td>
+             <td style="text-align: center;">{{scolarisation.indice_de_parite}}</td>
+         </tr>
+     </tbody>
+ </table> 
+ <div id="chart_div"></div>
+ 
+ 
+ <div style="margin-left: -75%;">
+     <h2>Niveau d'etude</h2> 
+  </div>
+ <table class="ui celled table">
+     <thead class="full-width">
+         <tr>
+             <th style="background-color: #0bcab1;text-align: center;">Num</th>
+             <th style="background-color: #0bcab1;text-align: center;">Nom</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let niveau_etude of niveau_etude; ">
+             <td style="text-align: center;">{{niveau_etude.id}}</td>
+             <td style="text-align: center;">{{niveau_etude.nom}}</td>
+         </tr>
+     </tbody>
+ </table>
+ <!-- <div id="piechart"  style="width: 600px; height: 400px;"></div>
+  -->

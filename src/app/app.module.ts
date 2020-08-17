@@ -14,32 +14,40 @@ import { DetailComponent } from './layout/detail/detail.component';
 import { EcoleComponent } from './layout/ecole/ecole.component';
 import { UniversiteComponent } from './layout/universite/universite.component';
 import { OffreComponent } from './layout/offre/offre.component';
+import { GraphicComponent } from './layout/graphic/graphic.component';
+import { MapsComponent } from './layout/maps/maps.component';
+import { TableComponent } from './layout/table/table.component';
 
 
 
 const appRoutes:Routes=[
-  {path: 'header', component:HeaderComponent},
-  {path: 'footer', component:FooterComponent},
-  {path: 'navbar', component:NavbarComponent},
-  { path: 'detail', component: DetailComponent },
 
-  {path: 'sidebar', component:SidebarComponent},
-  { path: 'article', component: ArticleComponent }
+  { path: 'footer', component: FooterComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'sidebar', component: SidebarComponent },
+  { path: 'article', component: ArticleComponent },
+  { path: 'detail', component: DetailComponent },
+  { path: 'graphic', component: GraphicComponent },
+  { path: 'maps', component: MapsComponent },
+  { path: 'table', component: TableComponent },
+
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     NavbarComponent,
     SidebarComponent,
+    GraphicComponent,
+    TableComponent,
+    MapsComponent,
     ArticleComponent,
     DetailComponent,
-    EcoleComponent,
-    UniversiteComponent,
-    OffreComponent
-  ],
+    FooterComponent
+    ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), AppRoutingModule, HttpClientModule
 

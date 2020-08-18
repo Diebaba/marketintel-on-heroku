@@ -1,1 +1,21 @@
-<p>ecole works!</p>
+
+
+<div style="margin-left: -10%;">
+    <h2>Listes de quelques établissements sénégalais</h2> 
+ </div>
+ <table class="ui celled table">
+     <thead class="full-width" >
+         <tr >
+             <th style="background-color: #0bcab1; text-align: center;" >Noms</th>
+             <th style="background-color: #0bcab1;text-align: center;">Descriptions</th>
+             <th style="background-color: #0bcab1;text-align: center;">Régions</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let ecole of ecole; ">
+             <td style="text-align: center;">{{ecole.nom}}</td>
+             <td style="text-align: center;">{{ecole.description}}</td>
+             <td style="text-align: center;">{{ecole.region}}</td>
+         </tr>
+     </tbody>
+ </table>

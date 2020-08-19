@@ -17,11 +17,16 @@ import { OffreComponent } from './layout/offre/offre.component';
 import { GraphicComponent } from './layout/graphic/graphic.component';
 import { MapsComponent } from './layout/maps/maps.component';
 import { TableComponent } from './layout/table/table.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ImmobilierComponent } from './immobilier/immobilier.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { VoitureComponent } from './voiture/voiture.component';
 
 
 
 const appRoutes:Routes=[
 
+  { path: '', component: AccueilComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'navbar', component: NavbarComponent },
@@ -31,6 +36,11 @@ const appRoutes:Routes=[
   { path: 'graphic', component: GraphicComponent },
   { path: 'maps', component: MapsComponent },
   { path: 'table', component: TableComponent },
+  { path: 'immobilier', component: ImmobilierComponent},
+  { path: 'restaurant', component: RestaurantComponent},
+  { path: 'voiture', component: VoitureComponent},
+  { path: 'offre', component: OffreComponent}
+
 
 
 ];
@@ -48,7 +58,12 @@ const appRoutes:Routes=[
     DetailComponent,
     FooterComponent,
     EcoleComponent,
-    UniversiteComponent
+    UniversiteComponent,
+    AccueilComponent,
+    ImmobilierComponent,
+    RestaurantComponent,
+    VoitureComponent,
+    OffreComponent
     ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), AppRoutingModule, HttpClientModule

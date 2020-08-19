@@ -1,1 +1,19 @@
-<p>universite works!</p>
+<div >
+    <h2>Liste de quelques universités sénégalaise</h2> 
+ </div>
+ <table class="ui celled table">
+    <thead class="full-width">
+        <tr>
+            <th style="background-color: #0bcab1;text-align: center;">Noms</th>
+            <th style="background-color: #0bcab1;text-align: center;">Types</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let universite of universite; ">
+            <td style="text-align: center;">{{universite.nom}}</td>
+            <td style="text-align: center;">{{universite.type_univ}}</td>
+        </tr>
+    </tbody>
+</table> 
+
+

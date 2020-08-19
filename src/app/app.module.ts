@@ -27,7 +27,7 @@ const appRoutes:Routes=[
   { path: 'navbar', component: NavbarComponent },
   { path: 'sidebar', component: SidebarComponent },
   { path: 'ecole', component: EcoleComponent },
-  { path: 'detail', component: DetailComponent },
+  { path: 'universite', component:  UniversiteComponent },
   { path: 'graphic', component: GraphicComponent },
   { path: 'maps', component: MapsComponent },
   { path: 'table', component: TableComponent },
@@ -47,7 +47,8 @@ const appRoutes:Routes=[
     ArticleComponent,
     DetailComponent,
     FooterComponent,
-    EcoleComponent
+    EcoleComponent,
+    UniversiteComponent
     ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), AppRoutingModule, HttpClientModule

@@ -1,30 +1,44 @@
-<div id="chart_div"></div>
 
+<div >
+    <h2>Tableau d'admission à l'examen du baccalauréat sénégalais de 2015 à 2019</h2> 
+ </div>
+ <table class="ui celled table">
+    <thead class="full-width">
+        <tr>
+            <th style="background-color: #0bcab1;text-align: center;">Années</th>
+            <th style="background-color: #0bcab1;text-align: center;">Nombre candidat</th>
+            <th style="background-color: #0bcab1;text-align: center;">Candidats admis au premier tour</th>
+            <th style="background-color: #0bcab1;text-align: center;">Candidats admis au second tour</th>
+            <th style="background-color: #0bcab1;text-align: center;">Taux admission</th>
 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let examen of examen; ">
+            <td style="text-align: center;">{{examen.annee}}</td>
+            <td style="text-align: center;">{{examen.nbr_candidat}}</td>
+            <td style="text-align: center;">{{examen.nbr_session_normale}}</td>
+            <td style="text-align: center;">{{examen.candidat_au_second_tour}}</td>
+            <td style="text-align: center;">{{examen.taux_admission}}</td>
+
+        </tr>
+    </tbody>
+</table> 
 <div class="ui sizer vertical segment">
     <div class="ui tiny header">Lorem Ipsum</div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, numquam? Ullam consequuntur suscipit sunt deleniti ad dignissimos maiores autem numquam eius labore nisi modi eveniet quae, tempora doloribus, magni voluptas?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam laboriosam vero inventore aspernatur, velit aliquam, ipsa accusantium atque neque porro ab adipisci minima architecto delectus sed, doloribus fugit dignissimos?Repellendus sed
         exercitationem quis assumenda adipisci magnam quidem possimus consectetur pariatur magni, saepe illo provident numquam vero iusto sunt, obcaecati qui! Quae, quibusdam magni. Unde voluptatem totam at laborum libero.</p>
 </div>
+<div id="chart_div"></div>
 
-<div>
-    <div class="row">
-        <div class="col-5">
-            <div id="curve_chart"></div>
-        </div>
-        <div class="col-5">
-            <div id="donutchart" ></div>
-        </div>
-    </div>
     <div class="ui sizer vertical segment">
         <div class="ui tiny header">Lorem Ipsum</div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, numquam? Ullam consequuntur suscipit sunt deleniti ad dignissimos maiores autem numquam eius labore nisi modi eveniet quae, tempora doloribus, magni voluptas?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam laboriosam vero inventore aspernatur, velit aliquam, ipsa accusantium atque neque porro ab adipisci minima architecto delectus sed, doloribus fugit dignissimos?Repellendus sed
             exercitationem quis assumenda adipisci magnam quidem possimus consectetur pariatur magni, saepe illo provident numquam vero iusto sunt, obcaecati qui! Quae, quibusdam magni. Unde voluptatem totam at laborum libero.</p>
     </div>
-</div>
-
-<div id="map_div"></div>
+    <div id="chart_div1"></div>
+    
 
 

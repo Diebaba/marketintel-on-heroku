@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExamenService } from 'src/app/examen.service';
+import { ExamenService } from 'src/app/services/examen.service';
+import { InvestissementService } from 'src/app/services/investissements.service';
 
 declare var google : any;
 @Component({
@@ -11,13 +12,16 @@ export class GraphicComponent implements OnInit {
   examen: any[] = [];
   currentExamen = null;
   tab: any[];
+  investissement: any[] = [];
+  currentInvestissement
   
 
   
-  constructor(private examenService: ExamenService) { }
+  constructor(private examenService: ExamenService, private investissementService: InvestissementService) { }
 
   ngOnInit(): void  { 
     this.retrieveExamen();
+    this.retrieveInvestissement();
   }
     
    /* 
@@ -106,35 +110,25 @@ chart() {
     console.log("item", item);
     return [item.annee, item.taux_admission, ]
   });
-    google.charts.load("current", { packages: ["corechart"] });
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['années','Taux d admission']
-      ].concat(items));
-        
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-        {
-          calc: "stringify",
-          sourceColumn: 1,
-          type: "string",
-          role: "annotation"
-        },
-        ]);
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
 
-      var options = {
-        title: "Taux d'admission au bac de 2015 à 2019",
-        width: 600,
-        height: 400,
-        bar: { groupWidth: "55%" },
-        legend: { position: 'top', maxLines: 3 },
-        isStacked: true
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Années','Taux admission']
+    ].concat(items));
 
-      };
-      var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
-      chart.draw(view, options);
-    }
+    var options = {
+      title: 'Admission au baccalairéat de 2015 à 2019',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+   
   
 
 }
@@ -167,6 +161,62 @@ chart1() {
       chart.draw(view, options);
     }
   
+
+}
+retrieveInvestissement(): void {
+
+
+  this.investissementService.get()
+    .subscribe(
+      data => {
+        this.investissement = data;
+        this.chart2();
+        
+
+        // console.log(this.tab);
+      },
+      error => {
+        console.log(error);
+      });
+}
+chart2 () {
+  const items = this.investissement.map(item => {
+    console.log("item", item);
+    return [item.annee, item.depense_pour_education_en_m, ]
+  });
+  google.charts.load("current", { packages: ["corechart"] });
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Années','Investissement']
+    ].concat(items));
+      
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+      {
+        calc: "stringify",
+        sourceColumn: 1,
+        type: "string",
+        role: "annotation"
+      },
+      ]);
+
+    var options = {
+      title: "Investissement de l Etat dans l education de 2010 à 2018 en milion de Franc CFA",
+      width: 600,
+      height: 400,
+      bar: { groupWidth: "55%" },
+      legend: { position: 'top', maxLines: 3 },
+      isStacked: true
+
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
+    chart.draw(view, options);
+  }
+
+
+
+ 
 
 }
  

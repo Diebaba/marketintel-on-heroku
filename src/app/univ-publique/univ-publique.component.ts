@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UniversiteService } from 'src/app/services/universite.service';
+import { UnivPubliqueService } from 'src/app/services/univ-publique.service';
 import * as Chart from 'chart.js';
 
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
@@ -7,23 +7,23 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 
 declare var google: any;
 @Component({
-  selector: 'app-universite',
-  templateUrl: './universite.component.html',
-  styleUrls: ['./universite.component.css']
+  selector: 'app-univ-publique',
+  templateUrl: './univ-publique.component.html',
+  styleUrls: ['./univ-publique.component.css']
 })
-export class UniversiteComponent implements OnInit {
+export class UnivPubliqueComponent implements OnInit {
   universite: any [] = [];
   currentUniversite = null;
   tab: any[];
-  constructor(private universiteService: UniversiteService ) { }
+  constructor(private univPubliqueService: UnivPubliqueService ) { }
 
   ngOnInit(): void {
-    this.retrieveUniversite();
+    this.retrieveUniversitePublique();
   }
-  retrieveUniversite(): void {
+  retrieveUniversitePublique(): void {
 
 
-    this.universiteService.get()
+    this.univPubliqueService.get()
       .subscribe(
         data => {
           this.universite = data;
@@ -66,3 +66,5 @@ export class UniversiteComponent implements OnInit {
 
  
 }
+
+

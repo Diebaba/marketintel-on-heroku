@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
 /* Api Local
- const baseUrl = 'http://127.0.0.1:8000/api/education_api/universite';
+ const baseUrl = 'https://marketintelapi.herokuapp.com/resto_api/resto';
  */
 // Api en ligne
-const baseUrl = 'https://cors-anywhere.herokuapp.com/https://marketintelapi.herokuapp.com/education_api/universite';
+const baseUrl = 'https://cors-anywhere.herokuapp.com/https://marketinteltest.herokuapp.com/resto_api/resto';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class UniversiteService {
+export class RestaurantService {
 
   constructor(private http: HttpClient) { }
 

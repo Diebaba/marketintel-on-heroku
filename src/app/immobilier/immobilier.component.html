@@ -1,1 +1,51 @@
-<p>immobilier works!</p>
+
+
+
+<div class="col-12 row">
+    <div class="ui segments, col-3" >
+        <div class="ui segment header">
+            <p>Immobilier</p>
+        </div>
+        <!-- <div class="ui segment">
+            <a href="ecole">Ecoles</a>
+        </div> -->
+        <div class="ui segment">
+            <a href="immobilier"> Offres Immobilières</a>
+        </div>
+        <div class="ui segment">
+            <a href=" ">Retour accueil</a>
+        </div>
+    </div> 
+    <div class="col-9"> 
+        <div >
+            <h2>Liste des offres Immobilières</h2> 
+         </div>
+         <table class="ui celled table">
+            <thead class="full-width">
+                <tr>
+                    <th style="background-color: #0bcab1;text-align: center;">Intitulé</th>
+                    <th style="background-color: #0bcab1;text-align: center;">Pays</th>
+                    <th style="background-color: #0bcab1;text-align: center;">prix</th>
+                    <th style="background-color: #0bcab1;text-align: center;">Monnaie</th>
+
+               
+               
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let immobilier of immobilier; ">
+                    <td style="text-align: center;">{{immobilier.intitule}}</td>
+                    <td style="text-align: center;">{{immobilier.country}}</td>
+                    <td style="text-align: center;">{{immobilier.price}}</td>
+                    <td style="text-align: center;">{{immobilier.monnaie}}</td>
+              
+               
+                </tr>
+            </tbody>
+        </table> 
+        
+        
+        
+    </div>
+
+</div>

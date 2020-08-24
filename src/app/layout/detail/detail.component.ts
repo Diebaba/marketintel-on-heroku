@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AdmissionService } from 'src/app/admission.service';
-import { ScolarisationService } from 'src/app/scolarisation.service';
-import { NiveauEtudeService } from 'src/app/niveau-etude.service';
+import { AdmissionService } from 'src/app/services/admission.service';
+import { ScolarisationService } from 'src/app/services/scolarisation.service';
+import { NiveauEtudeService } from 'src/app/services/niveau-etude.service';
 import * as Chart from 'chart.js';
 
 declare var google: any;

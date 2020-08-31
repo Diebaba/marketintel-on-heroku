@@ -20,16 +20,13 @@
         <div >
             <h2>Liste des offres Immobilières</h2> 
          </div>
-         <table class="ui celled table">
+        <!--  <table class="ui celled table">
             <thead class="full-width">
                 <tr>
                     <th style="background-color: #0bcab1;text-align: center;">Intitulé</th>
                     <th style="background-color: #0bcab1;text-align: center;">Pays</th>
                     <th style="background-color: #0bcab1;text-align: center;">prix</th>
                     <th style="background-color: #0bcab1;text-align: center;">Monnaie</th>
-
-               
-               
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +39,32 @@
                
                 </tr>
             </tbody>
-        </table> 
+        </table>  -->
+        <div class="container">
+            <div class="row">
+                <div class="search-immobilier">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search by intitule or pays">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Intitulés</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Pays</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Prix</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Monnaie</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let immobilier of immobilier | filter:searchText">
+                  <td style="text-align: center;">{{immobilier.intitule}}</td>
+                  <td style="text-align: center;">{{immobilier.country}}</td>
+                  <td style="text-align: center;">{{immobilier.price}}</td>
+                  <td style="text-align: center;">{{immobilier.monnaie}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
         
         
         

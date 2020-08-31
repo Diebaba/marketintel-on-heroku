@@ -1,1 +1,52 @@
-<p>offre works!</p>
+
+
+<div class="col-12 row">
+    <div class="ui segments, col-3" >
+        <div class="ui segment header">
+            <p>Voiture</p>
+        </div>
+      
+        <div class="ui segment">
+            <a href="offre"> Liste des offres d'emploi </a>
+        </div>
+        <div class="ui segment">
+            <a href=" ">Statistiques</a>
+        </div>
+        
+        <div class="ui segment">
+            <a href=" ">Retour accueil</a>
+        </div>
+    </div> 
+    <div class="col-9"> 
+        <div >
+            <h2>Liste des offres d'emploi</h2> 
+         </div>
+        <div class="container">
+            <div class="row">
+                <div class="search-offre">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="intitule ou pays">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Intitulés</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Expérience requise</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Pays</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Sources</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let offre of offre | filter:searchText">
+                  <td style="text-align: center;">{{offre.intitule}}</td>
+                  <td style="text-align: center;">{{offre.experience}}</td>
+                  <td style="text-align: center;">{{offre.pays}}</td>
+                  <td style="text-align: center;">{{offre.lien}}</td>
+
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+    </div>
+
+</div>

@@ -12,6 +12,7 @@ declare var google: any;
   styleUrls: ['./universite.component.css']
 })
 export class UniversiteComponent implements OnInit {
+  searchText;
   universite: any [] = [];
   currentUniversite = null;
   tab: any[];

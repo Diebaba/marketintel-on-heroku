@@ -15,24 +15,7 @@
         </div>
     </div> 
     <div class="col-9"> 
-<!--         <table class="ui celled table">
-            <thead class="full-width">
-                <tr>
-                    <th style="background-color: #0bcab1;text-align: center;">Nom</th>
-                    <th style="background-color: #0bcab1;text-align: center;">Région</th>
-                    <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
-                    <th style="background-color: #0bcab1;text-align: center;">Téléphone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let restaurant of restaurant;">
-                    <td style="text-align: center;">{{restaurant.nom}}</td>
-                    <td style="text-align: center;">{{restaurant.region}}</td>
-                    <td style="text-align: center;">{{restaurant.adresse}}</td>
-                    <td style="text-align: center;">{{restaurant.telephone}}</td>
-                </tr>
-            </tbody>
-        </table>   -->
+
         <div class="container">
             <div class="row">
                 <div class="search-restaurant">
@@ -42,16 +25,16 @@
                 <thead>
                 <tr>
                   <th style="background-color: #0bcab1;text-align: center;">Noms</th>
-                  <th style="background-color: #0bcab1;text-align: center;">Régions</th>
-                  <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
+<!--                   <th style="background-color: #0bcab1;text-align: center;">Régions</th>
+ -->                  <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
                   <th style="background-color: #0bcab1;text-align: center;">Téléphone</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let restaurant of restaurant | filter:searchText">
                   <td style="text-align: center;">{{restaurant.nom}}</td>
-                  <td style="text-align: center;">{{restaurant.region}}</td>
-                  <td style="text-align: center;">{{restaurant.adresse}}</td>
+<!--                   <td style="text-align: center;">{{restaurant.region}}</td>
+ -->                  <td style="text-align: center;">{{restaurant.adresse}}</td>
                   <td style="text-align: center;">{{restaurant.telephone}}</td>
                 </tr>
                 </tbody>

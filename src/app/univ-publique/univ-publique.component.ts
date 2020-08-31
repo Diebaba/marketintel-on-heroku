@@ -12,7 +12,9 @@ declare var google: any;
   styleUrls: ['./univ-publique.component.css']
 })
 export class UnivPubliqueComponent implements OnInit {
+  searchText
   universite: any [] = [];
+  
   currentUniversite = null;
   tab: any[];
   constructor(private univPubliqueService: UnivPubliqueService ) { }

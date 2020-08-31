@@ -28,7 +28,7 @@
         <div >
             <h2>Liste des écoles supérieurs privées sénégalaises</h2> 
          </div>
-         <table class="ui celled table">
+         <!-- <table class="ui celled table">
             <thead class="full-width">
                 <tr>
                     <th style="background-color: #0bcab1;text-align: center;">Noms</th>
@@ -41,7 +41,26 @@
                     <td style="text-align: center;">{{universite.adresse}}</td>
                 </tr>
             </tbody>
-        </table> 
+        </table>  -->
+        <div class="container">
+            <div class="row">
+                <div class="search-universite">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Nom">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Noms</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let universite of universite | filter:searchText">
+                  <td style="text-align: center;">{{universite.nom}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
         
         
         

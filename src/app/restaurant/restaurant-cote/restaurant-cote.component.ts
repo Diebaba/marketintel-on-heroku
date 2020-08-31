@@ -7,7 +7,7 @@ import {RestaurantCoteService} from 'src/app/services/restaurant-cote.service';
   styleUrls: ['./restaurant-cote.component.css']
 })
 export class RestaurantCoteComponent implements OnInit {
-
+  searchText
   restaurant: any [] = [];
   currentrestaurantcote = null;
   tab: any[];

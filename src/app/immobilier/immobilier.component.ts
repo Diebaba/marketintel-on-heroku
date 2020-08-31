@@ -9,7 +9,8 @@ import { ImmobilierService} from 'src/app/services/immobilier.service'
 })
 export class ImmobilierComponent implements OnInit {
   
-  
+  searchText;
+
   immobilier: any [] = [];
   currentimmobilier = null;
   tab: any[];

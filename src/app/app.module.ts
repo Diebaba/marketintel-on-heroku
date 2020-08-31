@@ -34,6 +34,9 @@ import { RestaurantBeninService } from './services/restaurant-benin.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { RestaurantGuineeComponent } from './restaurant/restaurant-guinee/restaurant-guinee.component';
+import { RestaurantTogoComponent } from './restaurant/restaurant-togo/restaurant-togo.component';
+import { RestaurantAfriquedusudComponent } from './restaurant/restaurant-afriquedusud/restaurant-afriquedusud.component';
 
 
 const appRoutes:Routes=[
@@ -55,7 +58,10 @@ const appRoutes:Routes=[
   { path: 'immobilier', component: ImmobilierComponent},
   { path: 'restaurant', component: RestaurantComponent},
   { path: 'voiture', component: VoitureComponent},
-  { path: 'offre', component: OffreComponent}
+  { path: 'offre', component: OffreComponent},
+  { path: 'guinee', component: RestaurantGuineeComponent},
+  { path: 'togo', component: RestaurantTogoComponent},
+  { path: 'afriquedusud', component: RestaurantAfriquedusudComponent }
 
 
 
@@ -83,7 +89,10 @@ const appRoutes:Routes=[
     UnivPubliqueComponent,
     RestaurantSenegalComponent,
     RestaurantCoteComponent,
-    RestaurantBeninComponent
+    RestaurantBeninComponent,
+    RestaurantGuineeComponent,
+    RestaurantTogoComponent,
+    RestaurantAfriquedusudComponent
     ],
   imports: [
     BrowserModule, 

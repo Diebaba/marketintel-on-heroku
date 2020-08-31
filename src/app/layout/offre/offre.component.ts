@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import {OffredemploiService } from 'src/app/services/offredemploi.service';
+
+declare var google: any;
 @Component({
   selector: 'app-offre',
   templateUrl: './offre.component.html',
@@ -7,9 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffreComponent implements OnInit {
 
-  constructor() { }
+  searchText;
+  offre: any [] = [];
+  currentoffreemploi = null;
+  tab: any[];
+  constructor(private offredemploiService: OffredemploiService) { }
 
   ngOnInit(): void {
+    this.retrieveOffre();
   }
 
+  retrieveOffre(): void {
+
+
+    this.offredemploiService.get()
+      .subscribe(
+        data => {
+          this.offre = data;
+         // this.chart();
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 }
+
+
+
+
+
+ 
+  
+
+

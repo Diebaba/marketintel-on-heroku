@@ -1,40 +1,22 @@
 
 .header {
-    background-color: #0bcab1;
-    color: white;
-    text-align: center;
+  background-color: #0bcab1;
+  color: white;
+  text-align: center;
 
 }
 
 .header p {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 .segment a {
-    color: rgb(156, 156, 156);
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    font-size: 120%;
+  color: rgb(156, 156, 156);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 120%;
 }
 
 .segment a:hover {
-    color: #0bcab1;
+  color: #0bcab1;
 }
-
-.container {
-    padding-top: 50px;
-    padding-bottom: 10px;
-    color: #405065;
-  }
-  
-  .search-voiture {
-    
-    margin:auto;
-  }
-  
-  .form-control {
-    box-shadow: 0 10px 40px 0 #B0C1D9;
-  }
-  .form-control::placeholder  {
-    font-family: FontAwesome;
-  }

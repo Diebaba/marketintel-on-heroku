@@ -9,15 +9,13 @@
         <div class="ui segment">
             <a href="restaurant"> Liste Restaurants par région</a>
         </div>
-        <div class="ui segment">
-            <a href="restaurant"> Liste Restaurants par ville</a>
-        </div>
+        
         <div class="ui segment">
             <a href=" ">Retour accueil</a>
         </div>
     </div> 
     <div class="col-9"> 
-        <table class="ui celled table">
+        <!-- <table class="ui celled table">
             <thead class="full-width">
                 <tr>
                     <th style="background-color: #0bcab1;text-align: center;">Nom</th>
@@ -34,6 +32,31 @@
                     <td style="text-align: center;">{{restaurant.telephone}}</td>
                 </tr>
             </tbody>
-        </table>  
+        </table>   -->
+        <div class="container">
+            <div class="row">
+                <div class="search-restaurant">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Nom, region ou adresse">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Noms</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Régions</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Téléphone</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let restaurant of restaurant | filter:searchText">
+                  <td style="text-align: center;">{{restaurant.nom}}</td>
+                  <td style="text-align: center;">{{restaurant.region}}</td>
+                  <td style="text-align: center;">{{restaurant.adresse}}</td>
+                  <td style="text-align: center;">{{restaurant.telephone}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,20 +1,20 @@
+
 import { Component, OnInit } from '@angular/core';
-import {RestaurantSenService } from 'src/app/services/restaurant-sen.service';
+import {RestaurantGuineeService } from 'src/app/services/restaurant-guinee.service';
 
 declare var google: any;
 
 @Component({
-  selector: 'app-restaurant-senegal',
-  templateUrl: './restaurant-senegal.component.html',
-  styleUrls: ['./restaurant-senegal.component.css']
+  selector: 'app-restaurant-guinee',
+  templateUrl: './restaurant-guinee.component.html',
+  styleUrls: ['./restaurant-guinee.component.css']
 })
-export class RestaurantSenegalComponent implements OnInit {
-
+export class RestaurantGuineeComponent implements OnInit {
   searchText;
   restaurant: any [] = [];
-  currentrestaurantsen = null;
+  currentrestauranttogo = null;
   tab: any[];
-  constructor(private restaurantSenService: RestaurantSenService) { }
+  constructor(private restaurantGuineeService: RestaurantGuineeService) { }
 
   ngOnInit(): void {
     this.retrieveRestaurant();
@@ -23,7 +23,7 @@ export class RestaurantSenegalComponent implements OnInit {
   retrieveRestaurant(): void {
 
 
-    this.restaurantSenService.get()
+    this.restaurantGuineeService.get()
       .subscribe(
         data => {
           this.restaurant = data;
@@ -42,3 +42,4 @@ export class RestaurantSenegalComponent implements OnInit {
 
  
   
+

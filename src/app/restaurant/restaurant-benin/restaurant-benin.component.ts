@@ -7,6 +7,7 @@ import { RestaurantBeninService } from 'src/app/services/restaurant-benin.servic
   styleUrls: ['./restaurant-benin.component.css']
 })
 export class RestaurantBeninComponent implements OnInit {
+  searchText;
 
   restaurant: any [] = [];
   currentrestaurantbenin = null;

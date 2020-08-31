@@ -1,1 +1,51 @@
-<p>voiture works!</p>
+
+
+<div class="col-12 row">
+    <div class="ui segments, col-3" >
+        <div class="ui segment header">
+            <p>Voiture</p>
+        </div>
+      
+        <div class="ui segment">
+            <a href="voiture"> Liste des voitures </a>
+        </div>
+        <div class="ui segment">
+            <a href="statvoiture">Statistiques</a>
+        </div>
+        
+        <div class="ui segment">
+            <a href=" ">Retour accueil</a>
+        </div>
+    </div> 
+    <div class="col-9"> 
+        <div >
+            <h2>Liste des voitures </h2> 
+         </div>
+        <div class="container">
+            <div class="row">
+                <div class="search-voiture">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search by modele or constructeur">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Modele</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Constructeur</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Année</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let voiture of voiture | filter:searchText">
+                  <td style="text-align: center;">{{voiture.modele}}</td>
+                  <td style="text-align: center;">{{voiture.constructeur}}</td>
+                  <td style="text-align: center;">{{voiture.annee}}</td>
+                  <td style="text-align: center;">{{voiture.prix}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+    </div>
+
+</div>

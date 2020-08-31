@@ -1,51 +1,102 @@
-
-
-
 <div class="col-12 row">
     <div class="ui segments, col-3" >
         <div class="ui segment header">
             <p>Restaurant </p>
         </div>
-        <!-- <div class="ui segment">
-            <a href="ecole">Ecoles</a>
-        </div> -->
         <div class="ui segment">
-            <a href="restaurant"> Liste Restaurants</a>
+            <a href="restaurant"> Liste Restaurants par pays</a>
+        </div>
+        <div class="ui segment">
+            <a href="restaurant"> Liste Restaurants par région</a>
+        </div>
+        <div class="ui segment">
+            <a href="restaurant"> Liste Restaurants par ville</a>
         </div>
         <div class="ui segment">
             <a href=" ">Retour accueil</a>
         </div>
     </div> 
     <div class="col-9"> 
-        <div >
-            <h2>Liste des restaurants</h2> 
-         </div>
-         <table class="ui celled table">
+        <div class="row">
+            <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/senegal.jpg" class="card-img-top" style="width: 90%;" alt="">
+                <div class="card-body">
+                    <h5>Sénégal</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="senegal" class="btn btn-primary">Voir les restaurants</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="../../assets/cote.png" class="card-img-top" style="width: 90%;" alt="">
+                  <div class="card-body">
+                    <h5>Cote d'Ivoire</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="cote" class="btn btn-primary">Voir les restaurants</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="../../assets/benin.jpg" class="card-img-top" style="width: 90%;" alt="">
+                  <div class="card-body">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="benin" class="btn btn-primary">Voir les restaurants</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div>
+            zdn
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/donut.png" class="card-img-top" style="width: 50%;" alt="">
+                <div class="card-body">
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="../../assets/donut.png" class="card-img-top" style="width: 50%;" alt="">
+                  <div class="card-body">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="../../assets/donut.png" class="card-img-top" style="width: 50%;" alt="">
+                  <div class="card-body">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!--  <table class="ui celled table">
             <thead class="full-width">
                 <tr>
                     <th style="background-color: #0bcab1;text-align: center;">Nom</th>
                     <th style="background-color: #0bcab1;text-align: center;">Pays</th>
                     <th style="background-color: #0bcab1;text-align: center;">Région</th>
                     <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
-
-               
-               
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let restaurant of restaurant; ">
+                <tr *ngFor="let restaurant of restaurant;">
                     <td style="text-align: center;">{{restaurant.nom}}</td>
                     <td style="text-align: center;">{{restaurant.pays}}</td>
                     <td style="text-align: center;">{{restaurant.region}}</td>
                     <td style="text-align: center;">{{restaurant.adresse}}</td>
-              
-               
                 </tr>
             </tbody>
-        </table> 
-        
-        
-        
-    </div>
-
+        </table>  -->
+     </div>
 </div>

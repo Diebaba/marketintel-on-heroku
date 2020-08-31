@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {MatTableModule} from '@angular/material/table';
+
+
+
+
 import { HeaderComponent } from './header/header.component';
 import { Route } from '@angular/compiler/src/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -22,7 +27,13 @@ import { ImmobilierComponent } from './immobilier/immobilier.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { VoitureComponent } from './voiture/voiture.component';
 import { UnivPubliqueComponent } from './univ-publique/univ-publique.component';
-
+import { RestaurantSenegalComponent } from './restaurant/restaurant-senegal/restaurant-senegal.component';
+import { RestaurantCoteComponent} from './restaurant/restaurant-cote/restaurant-cote.component';
+import { RestaurantBeninComponent } from './restaurant/restaurant-benin/restaurant-benin.component';
+import { RestaurantBeninService } from './services/restaurant-benin.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes:Routes=[
@@ -35,7 +46,9 @@ const appRoutes:Routes=[
   { path: 'ecole', component: EcoleComponent },
   { path: 'universite', component:  UniversiteComponent },
   { path: 'univPublique', component:  UnivPubliqueComponent },
-
+  { path: 'senegal', component: RestaurantSenegalComponent },
+  { path: 'cote' , component: RestaurantCoteComponent },
+  { path: 'benin', component: RestaurantBeninComponent },
   { path: 'statistique', component: GraphicComponent },
   { path: 'maps', component: MapsComponent },
   { path: 'table', component: TableComponent },
@@ -67,10 +80,20 @@ const appRoutes:Routes=[
     RestaurantComponent,
     VoitureComponent,
     OffreComponent,
-    UnivPubliqueComponent
+    UnivPubliqueComponent,
+    RestaurantSenegalComponent,
+    RestaurantCoteComponent,
+    RestaurantBeninComponent
     ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), AppRoutingModule, HttpClientModule
+    BrowserModule, 
+    RouterModule.forRoot(appRoutes),
+    AppRoutingModule, 
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    Ng2SearchPipeModule,
+    FormsModule
 
   ],
   providers: [],

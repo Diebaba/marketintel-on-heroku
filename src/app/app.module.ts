@@ -37,7 +37,9 @@ import { RestaurantGuineeComponent } from './restaurant/restaurant-guinee/restau
 import { RestaurantTogoComponent } from './restaurant/restaurant-togo/restaurant-togo.component';
 import { RestaurantAfriquedusudComponent } from './restaurant/restaurant-afriquedusud/restaurant-afriquedusud.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
- 
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
 const appRoutes:Routes=[
 
   { path: '', component: AccueilComponent },
@@ -102,10 +104,13 @@ const appRoutes:Routes=[
     MatTableModule,
     Ng2SearchPipeModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgxNavbarModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

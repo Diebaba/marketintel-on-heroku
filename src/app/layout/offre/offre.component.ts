@@ -14,6 +14,9 @@ export class OffreComponent implements OnInit {
   offre: any [] = [];
   currentoffreemploi = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private offredemploiService: OffredemploiService) { }
 
   ngOnInit(): void {

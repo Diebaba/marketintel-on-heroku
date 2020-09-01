@@ -14,6 +14,9 @@ export class RestaurantGuineeComponent implements OnInit {
   restaurant: any [] = [];
   currentrestauranttogo = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private restaurantGuineeService: RestaurantGuineeService) { }
 
   ngOnInit(): void {

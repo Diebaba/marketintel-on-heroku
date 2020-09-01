@@ -14,9 +14,11 @@ declare var google: any;
 export class UnivPubliqueComponent implements OnInit {
   searchText
   universite: any [] = [];
-  
   currentUniversite = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+  
   constructor(private univPubliqueService: UnivPubliqueService ) { }
 
   ngOnInit(): void {

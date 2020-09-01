@@ -55,7 +55,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let immobilier of immobilier | filter:searchText">
+                <tr *ngFor="let immobilier of immobilier | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
                   <td style="text-align: center;">{{immobilier.intitule}}</td>
                   <td style="text-align: center;">{{immobilier.country}}</td>
                   <td style="text-align: center;">{{immobilier.price}}</td>
@@ -63,6 +63,8 @@
                 </tr>
                 </tbody>
               </table>
+              <ngb-pagination [collectionSize]="immobilier.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
             </div>
         </div>
         

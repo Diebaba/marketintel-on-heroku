@@ -48,14 +48,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let restaurant of restaurant | filter:searchText">
-                  <td style="text-align: center;">{{restaurant.nom}}</td>
+                <tr *ngFor="let restaurant of restaurant | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                        <td style="text-align: center;">{{restaurant.nom}}</td>
                   <td style="text-align: center;">{{restaurant.region}}</td>
                   <td style="text-align: center;">{{restaurant.adresse}}</td>
                   <td style="text-align: center;">{{restaurant.telephone}}</td>
                 </tr>
                 </tbody>
               </table>
+              <ngb-pagination [collectionSize]="restaurant.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
             </div>
         </div>
     </div>

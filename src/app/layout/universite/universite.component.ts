@@ -16,6 +16,9 @@ export class UniversiteComponent implements OnInit {
   universite: any [] = [];
   currentUniversite = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private universiteService: UniversiteService ) { }
 
   ngOnInit(): void {

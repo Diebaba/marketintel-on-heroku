@@ -7,7 +7,6 @@ import {MatTableModule} from '@angular/material/table';
 
 
 
-
 import { HeaderComponent } from './header/header.component';
 import { Route } from '@angular/compiler/src/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -37,8 +36,8 @@ import { FormsModule } from '@angular/forms';
 import { RestaurantGuineeComponent } from './restaurant/restaurant-guinee/restaurant-guinee.component';
 import { RestaurantTogoComponent } from './restaurant/restaurant-togo/restaurant-togo.component';
 import { RestaurantAfriquedusudComponent } from './restaurant/restaurant-afriquedusud/restaurant-afriquedusud.component';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+ 
 const appRoutes:Routes=[
 
   { path: '', component: AccueilComponent },
@@ -102,7 +101,8 @@ const appRoutes:Routes=[
     BrowserAnimationsModule,
     MatTableModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    NgbModule
 
   ],
   providers: [],

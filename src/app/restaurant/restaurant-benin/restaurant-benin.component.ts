@@ -8,10 +8,12 @@ import { RestaurantBeninService } from 'src/app/services/restaurant-benin.servic
 })
 export class RestaurantBeninComponent implements OnInit {
   searchText;
-
   restaurant: any [] = [];
   currentrestaurantbenin = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private restaurantBeninService: RestaurantBeninService) { }
 
   ngOnInit(): void {

@@ -12,6 +12,9 @@ export class RestaurantAfriquedusudComponent implements OnInit {
   restaurant: any [] = [];
   currentrestaurantafriquedusud = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private restaurantAfriqueService: RestaurantAfriqueService) { }
 
   ngOnInit(): void {

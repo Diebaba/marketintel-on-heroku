@@ -14,6 +14,9 @@ export class RestaurantSenegalComponent implements OnInit {
   restaurant: any [] = [];
   currentrestaurantsen = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private restaurantSenService: RestaurantSenService) { }
 
   ngOnInit(): void {

@@ -11,6 +11,9 @@ export class RestaurantCoteComponent implements OnInit {
   restaurant: any [] = [];
   currentrestaurantcote = null;
   tab: any[];
+  page = 1;
+  pageSize =10;
+
   constructor(private restaurantCoteService: RestaurantCoteService) { }
 
   ngOnInit(): void {

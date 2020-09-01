@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VoitureService} from 'src/app/services/voiture.service';
 
-
 @Component({
   selector: 'app-voiture',
   templateUrl: './voiture.component.html',
@@ -13,12 +12,15 @@ export class VoitureComponent implements OnInit {
   currentvoiture = null;
   tab: any[];
   filteredVoiture: any;
-  apiNameList: any;
   filterString: any;
- 
+  page = 1;
+  pageSize =10;
   
 
-  constructor(private voitureService: VoitureService) { }
+  constructor(private voitureService: VoitureService) {
+    
+   }
+
 
   ngOnInit(): void {
     this.retrieveVoiture();
@@ -36,17 +38,4 @@ export class VoitureComponent implements OnInit {
           console.log(error);
         });
   }
-
- 
-  transformPlus(event) {
-    console.log(event);
-  }
-
-  /* getFilteredModele() {
-    this.filteredVoiture = this.apiNameList.filter(voiture => voiture.modele.toLowerCase().indexOf(this.filterString.toLowerCase()) > -1);
-  } */
-
-  
-
-
 }

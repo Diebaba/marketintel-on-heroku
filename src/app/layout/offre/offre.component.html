@@ -36,8 +36,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let offre of offre | filter:searchText">
-                  <td style="text-align: center;">{{offre.intitule}}</td>
+                <tr *ngFor="let offre of offre | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                    <td style="text-align: center;">{{offre.intitule}}</td>
                   <td style="text-align: center;">{{offre.experience}}</td>
                   <td style="text-align: center;">{{offre.pays}}</td>
                   <td style="text-align: center;">{{offre.lien}}</td>
@@ -45,6 +45,8 @@
                 </tr>
                 </tbody>
               </table>
+              <ngb-pagination [collectionSize]="offre.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
             </div>
           </div>
     </div>

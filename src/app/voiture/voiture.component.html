@@ -1,5 +1,3 @@
-
-
 <div class="col-12 row">
     <div class="ui segments, col-3" >
         <div class="ui segment header">
@@ -36,7 +34,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let voiture of voiture | filter:searchText">
+                  <!--le filtre et la pagination-->
+                <tr *ngFor="let voiture of voiture | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
                   <td style="text-align: center;">{{voiture.modele}}</td>
                   <td style="text-align: center;">{{voiture.constructeur}}</td>
                   <td style="text-align: center;">{{voiture.annee}}</td>
@@ -44,7 +43,12 @@
                 </tr>
                 </tbody>
               </table>
+              <!--Faire la pagination sur l'affichage des données-->
+              <ngb-pagination [collectionSize]="voiture.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
             </div>
           </div>
     </div>
-</div>
+</div>   
+
+ 

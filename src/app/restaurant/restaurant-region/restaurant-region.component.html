@@ -1,0 +1,47 @@
+<div class="col-12 row">
+    <div class="ui segments, col-3" >
+        <div class="ui segment header">
+            <p>Restaurant </p>
+        </div>
+        <div class="ui segment">
+            <a href="restaurant"> Liste Restaurants par pays</a>
+        </div>
+        <div class="ui segment">
+            <a href="restaurant"> Liste Restaurants par région</a>
+        </div>
+        
+        <div class="ui segment">
+            <a href=" ">Retour accueil</a>
+        </div>
+    </div> 
+    <div class="col-9"> 
+
+        <div class="container">
+            <div class="row">
+                <div class="search-restaurant">
+                    Rechercher<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Région">
+                  </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th style="background-color: #0bcab1;text-align: center;">Noms</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Régions</th>
+                 <th style="background-color: #0bcab1;text-align: center;">Adresse</th>
+                  <th style="background-color: #0bcab1;text-align: center;">Téléphone</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let restaurant of restaurant | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                    <td style="text-align: center;">{{restaurant.nom}}</td>
+                    <td style="text-align: center;">{{restaurant.region}}</td>
+                  <td style="text-align: center;">{{restaurant.adresse}}</td>
+                  <td style="text-align: center;">{{restaurant.telephone}}</td>
+                </tr>
+                </tbody>
+              </table>
+              <ngb-pagination [collectionSize]="restaurant.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
+            </div>
+        </div>
+    </div>
+</div>

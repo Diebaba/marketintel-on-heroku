@@ -2,7 +2,7 @@
 
 
 <div class="col-12 row">
-    <div class="ui segments, col-3" >
+    <div class="ui segments, col-md-3" >
         <div class="ui segment header">
             <p>Immobilier</p>
         </div>
@@ -13,7 +13,7 @@
             <a href=" ">Retour accueil</a>
         </div>
     </div> 
-    <div class="col-9"> 
+    <div class="col-md-9"> 
         <div >
             <h2>Liste des offres Immobilières</h2> 
          </div>
@@ -41,12 +41,8 @@
                 </tbody>
               </table>
               <ngb-pagination [collectionSize]="immobilier.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
-
             </div>
         </div>
-        
-        
-        
-    </div>
+        </div>
 
 </div>

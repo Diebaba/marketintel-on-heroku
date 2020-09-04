@@ -1,13 +1,10 @@
 
 
-<div class="col-12 row">
+<div class="col-md-12 row">
     <div class="ui segments, col-3" >
         <div class="ui segment header">
             <p>Education</p>
         </div>
-        <!-- <div class="ui segment">
-            <a href="ecole">Ecoles</a>
-        </div> -->
         <div class="ui segment">
             <a href="universite"> Universités Privées</a>
         </div>
@@ -21,7 +18,7 @@
             <a href=" ">Retour accueil</a>
         </div>
     </div> 
-    <div class="col-9"> 
+    <div class="col-md-9"> 
         <div >
             <h2>Liste des écoles supérieurs publiques sénégalaises</h2> 
          </div>
@@ -38,17 +35,13 @@
                 </thead>
                 <tbody>
                 <tr *ngFor="let universite of universite | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-                        <td style="text-align: center;">{{universite.nom}}</td>
+                <td style="text-align: center;">{{universite.nom}}</td>
                 </tr>
                 </tbody>
               </table>
               <ngb-pagination [collectionSize]="universite.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
-
             </div>
         </div>
-        
-        
-        
     </div>
 
 </div>

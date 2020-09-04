@@ -39,6 +39,7 @@ import { RestaurantAfriquedusudComponent } from './restaurant/restaurant-afrique
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { RestaurantRegionComponent } from './restaurant/restaurant-region/restaurant-region.component';
 
 const appRoutes:Routes=[
 
@@ -62,8 +63,8 @@ const appRoutes:Routes=[
   { path: 'offre', component: OffreComponent},
   { path: 'guinee', component: RestaurantGuineeComponent},
   { path: 'togo', component: RestaurantTogoComponent},
-  { path: 'afriquedusud', component: RestaurantAfriquedusudComponent }
-
+  { path: 'afriquedusud', component: RestaurantAfriquedusudComponent },
+  {path: 'restaurantRegion', component: RestaurantRegionComponent }
 
 
 ];
@@ -93,7 +94,8 @@ const appRoutes:Routes=[
     RestaurantBeninComponent,
     RestaurantGuineeComponent,
     RestaurantTogoComponent,
-    RestaurantAfriquedusudComponent
+    RestaurantAfriquedusudComponent,
+    RestaurantRegionComponent,
     ],
   imports: [
     BrowserModule, 
